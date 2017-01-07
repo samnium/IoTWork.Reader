@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36C3A121-3004-4A25-B213-EFD8106AFFEF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IoTWork.IoTReader.net4</RootNamespace>
+    <AssemblyName>IoTWork.IoTReader.net4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataModel\LinkPriority.cs" />
+    <Compile Include="Exceptions\ChainException.cs" />
+    <Compile Include="Exceptions\ParserException.cs" />
+    <Compile Include="Exceptions\PipeException.cs" />
+    <Compile Include="Exceptions\SensorException.cs" />
+    <Compile Include="Exceptions\TriggerException.cs" />
+    <Compile Include="Helpers\AsyncHelper.cs" />
+    <Compile Include="Helpers\IoTReaderHelper.cs" />
+    <Compile Include="Interfaces\IChain.cs" />
+    <Compile Include="Interfaces\IChainDefinition.cs" />
+    <Compile Include="Interfaces\IClient.cs" />
+    <Compile Include="Interfaces\IDispatcher.cs" />
+    <Compile Include="Interfaces\IJunction.cs" />
+    <Compile Include="Interfaces\IJunctionPoint.cs" />
+    <Compile Include="Interfaces\IJunctionPointSource.cs" />
+    <Compile Include="Interfaces\IPipe.cs" />
+    <Compile Include="Interfaces\IPipeDefinition.cs" />
+    <Compile Include="Interfaces\ISample.cs" />
+    <Compile Include="Interfaces\ISensor.cs" />
+    <Compile Include="Interfaces\ISensorDefinition.cs" />
+    <Compile Include="Interfaces\IServer.cs" />
+    <Compile Include="Interfaces\ITrigger.cs" />
+    <Compile Include="Interfaces\ITriggerDefinition.cs" />
+    <Compile Include="IoTWork.DeviceManager\ManagementService.cs" />
+    <Compile Include="IoTWork.DeviceManager\TcpManagementHost.cs" />
+    <Compile Include="IoTWork.Infrastructure\Compressors\GZipCompressor.cs" />
+    <Compile Include="IoTWork.Infrastructure\Compressors\VoidCompressor.cs" />
+    <Compile Include="IoTWork.Infrastructure\Constants.cs" />
+    <Compile Include="IoTWork.Infrastructure\Formatters\BinaryFormatter.cs" />
+    <Compile Include="IoTWork.Infrastructure\Formatters\JSonFormatter.cs" />
+    <Compile Include="IoTWork.Infrastructure\Formatters\VoidFormatter.cs" />
+    <Compile Include="IoTWork.Infrastructure\Formatters\XmlFormatter.cs" />
+    <Compile Include="IoTWork.Infrastructure\Helpers\IoTWorkHelper.cs" />
+    <Compile Include="IoTWork.Infrastructure\Helpers\SerializerHelper.cs" />
+    <Compile Include="IoTWork.Infrastructure\Interfaces\ICompressor.cs" />
+    <Compile Include="IoTWork.Infrastructure\Interfaces\IDeviceManagementInterface.cs" />
+    <Compile Include="IoTWork.Infrastructure\Interfaces\IFormatter.cs" />
+    <Compile Include="IoTWork.Infrastructure\Interfaces\IPacketManagerInput.cs" />
+    <Compile Include="IoTWork.Infrastructure\Interfaces\IPacketManagerOutput.cs" />
+    <Compile Include="IoTWork.Infrastructure\Interfaces\ISigner.cs" />
+    <Compile Include="IoTWork.Infrastructure\Logging\LogFormat.cs" />
+    <Compile Include="IoTWork.Infrastructure\Logging\LogManager.cs" />
+    <Compile Include="IoTWork.Infrastructure\Management\ExceptionContainer.cs" />
+    <Compile Include="IoTWork.Infrastructure\Management\Journal.cs" />
+    <Compile Include="IoTWork.Infrastructure\Networking\PacketManagerInput.cs" />
+    <Compile Include="IoTWork.Infrastructure\Networking\PacketManagerOutput.cs" />
+    <Compile Include="IoTWork.Infrastructure\Signer\KeyManager.cs" />
+    <Compile Include="IoTWork.Infrastructure\Signer\VoidSigner.cs" />
+    <Compile Include="IoTWork.Infrastructure\Statistics\ErrorInfo.cs" />
+    <Compile Include="IoTWork.Infrastructure\Statistics\Statistics.cs" />
+    <Compile Include="IoTWork.Infrastructure\Types\IoTReaderCommand.cs" />
+    <Compile Include="IoTWork.Infrastructure\Types\IoTReaderCommandName.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\AskForAlive.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\AskForErrors.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\AskForStatistics.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\AskForUpTime.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\Command.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\CommandForDevice.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\CommandForNavigation.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\CommandForQuery.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\CommandForTransfer.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\ListOfDllFilesForPipes.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\ListOfDllFilesForSensors.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\RestartAcquire.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\RestartApplication.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\RestartDevice.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\StopAcquire.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\UploadConfigurationDeviceFile.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\UploadConfigurationLogFile.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\UploadRequestForDllFileForPipe.cs" />
+    <Compile Include="IoTWork.Protocol\Commands\UploadRequestForDllFileForSensor.cs" />
+    <Compile Include="IoTWork.Protocol\Datas\Measures.cs" />
+    <Compile Include="IoTWork.Protocol\Datas\Sample.cs" />
+    <Compile Include="IoTWork.Protocol\Devices\AcquireStatus.cs" />
+    <Compile Include="IoTWork.Protocol\Devices\Alive.cs" />
+    <Compile Include="IoTWork.Protocol\Devices\Errors.cs" />
+    <Compile Include="IoTWork.Protocol\Devices\ManagerStarted.cs" />
+    <Compile Include="IoTWork.Protocol\Devices\ManagerStopped.cs" />
+    <Compile Include="IoTWork.Protocol\Devices\Message.cs" />
+    <Compile Include="IoTWork.Protocol\Devices\Note.cs" />
+    <Compile Include="IoTWork.Protocol\Devices\Statistics.cs" />
+    <Compile Include="IoTWork.Protocol\Devices\UpTime.cs" />
+    <Compile Include="IoTWork.Protocol\IIotPacket.cs" />
+    <Compile Include="IoTWork.Protocol\IotPacket.cs" />
+    <Compile Include="IoTWork.Protocol\Types\Header.cs" />
+    <Compile Include="IoTWork.Protocol\Types\PacketCodes.cs" />
+    <Compile Include="IoTWork.Protocol\Types\Payload.cs" />
+    <Compile Include="IoTWork.Protocol\Types\ServiceCodes.cs" />
+    <Compile Include="IoTWork.XML\FileLoader.cs" />
+    <Compile Include="IoTWork.XML\ILoader.cs" />
+    <Compile Include="IoTWork.XML\IParser.cs" />
+    <Compile Include="IoTWork.XML\XMLClasses\IoTReader.cs" />
+    <Compile Include="IoTWork.XML\XSDParser.cs" />
+    <Compile Include="Management\Chain.cs" />
+    <Compile Include="Management\ChainDefinition.cs" />
+    <Compile Include="Management\Context.cs" />
+    <Compile Include="Management\Factory.cs" />
+    <Compile Include="Management\Junction.cs" />
+    <Compile Include="Management\PipeDefinition.cs" />
+    <Compile Include="Management\QuartzJobData.cs" />
+    <Compile Include="Management\Sample.cs" />
+    <Compile Include="Management\SensorArchive.cs" />
+    <Compile Include="Management\SensorDefinition.cs" />
+    <Compile Include="Management\SensorJob.cs" />
+    <Compile Include="Management\Trigger.cs" />
+    <Compile Include="Management\TriggerDefinition.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="Networking\Dispatcher.cs" />
+    <Compile Include="Networking\NetworkManager.cs" />
+    <Compile Include="Networking\PacketFactory.cs" />
+    <Compile Include="Networking\TcpServer.cs" />
+    <Compile Include="Networking\UdpClient.cs" />
+    <Compile Include="Networking\VoidClient.cs" />
+    <Compile Include="Networking\WebClient.cs" />
+    <Compile Include="Pipes\Pipe.cs" />
+    <Compile Include="Pipes\PipeCustom.cs" />
+    <Compile Include="Pipes\PipeSimple.cs" />
+    <Compile Include="Pipes\PipeWait.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sensors\BaseSensor.cs" />
+    <Compile Include="Sensors\CustomSensor.cs" />
+    <Compile Include="Sensors\RandomSensor.cs" />
+    <Compile Include="Sensors\VoidSensor.cs" />
+    <Compile Include="Triggers\SimpleTrigger.cs" />
+    <Compile Include="Utils\ExecutionStep.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IoTWork.Protocol\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IoTWork.Contracts.net4\IoTWork.Contracts.net4.csproj">
+      <Project>{07c2b78b-df69-4bc3-a274-ad433a9220b3}</Project>
+      <Name>IoTWork.Contracts.net4</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

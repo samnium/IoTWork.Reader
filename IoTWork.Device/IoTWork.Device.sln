@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTWork.Contracts.net4", "..\IoTWork.Contracts.net4\IoTWork.Contracts.net4.csproj", "{07C2B78B-DF69-4BC3-A274-AD433A9220B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTWork.IoTReader.Console.net4", "..\IoTWork.IoTReader.Console.net4\IoTWork.IoTReader.Console.net4.csproj", "{B8368EED-2F75-48E2-A8C3-C3B561004888}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTWork.IoTReader.net4", "..\IoTWork.IoTReader.net4\IoTWork.IoTReader.net4.csproj", "{36C3A121-3004-4A25-B213-EFD8106AFFEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTWork.Samples.net4", "..\IoTWork.Samples.net4\IoTWork.Samples.net4.csproj", "{A13A8B20-6E35-429B-BD28-25E44CDB1F28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi.SHat.Sensor.Humidity.mono", "..\IoTTrials\Raspberry.Pi.SenseHat\Device\Pi.SHat.Sensor.Humidity.mono\Pi.SHat.Sensor.Humidity.mono.csproj", "{3DC71DA2-CE7F-473E-9A3C-1F357AE98D0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi.SHat.Sensor.Pipe.Dump.mono", "..\IoTTrials\Raspberry.Pi.SenseHat\Device\Pi.SHat.Sensor.Pipe.Dump.mono\Pi.SHat.Sensor.Pipe.Dump.mono.csproj", "{55413DBF-A384-4187-897D-B4ED475B4FFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi.SHat.Sensor.Pressure.mono", "..\IoTTrials\Raspberry.Pi.SenseHat\Device\Pi.SHat.Sensor.Pressure.mono\Pi.SHat.Sensor.Pressure.mono.csproj", "{B6FB279A-4021-4F7F-8867-32ED623586A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi.SHat.Sensor.Temperature.mono", "..\IoTTrials\Raspberry.Pi.SenseHat\Device\Pi.SHat.Sensor.Temperature.mono\Pi.SHat.Sensor.Temperature.mono.csproj", "{623580DC-1749-43F9-B232-B75CC73EF14E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Trials", "Trials", "{CC12A84F-500C-459F-AFCB-0BFC71CB0C93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reader", "Reader", "{CD2E5BD7-F065-4210-AEA0-1AD7218F4A0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{F29DB190-6ECE-4F33-A72A-E88041CCE107}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pi.SHat", "Pi.SHat", "{28594333-DFE7-402C-B34E-EA40C9A83EB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07C2B78B-DF69-4BC3-A274-AD433A9220B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C2B78B-DF69-4BC3-A274-AD433A9220B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C2B78B-DF69-4BC3-A274-AD433A9220B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C2B78B-DF69-4BC3-A274-AD433A9220B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8368EED-2F75-48E2-A8C3-C3B561004888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8368EED-2F75-48E2-A8C3-C3B561004888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8368EED-2F75-48E2-A8C3-C3B561004888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8368EED-2F75-48E2-A8C3-C3B561004888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36C3A121-3004-4A25-B213-EFD8106AFFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C3A121-3004-4A25-B213-EFD8106AFFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C3A121-3004-4A25-B213-EFD8106AFFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C3A121-3004-4A25-B213-EFD8106AFFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13A8B20-6E35-429B-BD28-25E44CDB1F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13A8B20-6E35-429B-BD28-25E44CDB1F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13A8B20-6E35-429B-BD28-25E44CDB1F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13A8B20-6E35-429B-BD28-25E44CDB1F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC71DA2-CE7F-473E-9A3C-1F357AE98D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC71DA2-CE7F-473E-9A3C-1F357AE98D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC71DA2-CE7F-473E-9A3C-1F357AE98D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC71DA2-CE7F-473E-9A3C-1F357AE98D0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55413DBF-A384-4187-897D-B4ED475B4FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55413DBF-A384-4187-897D-B4ED475B4FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55413DBF-A384-4187-897D-B4ED475B4FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55413DBF-A384-4187-897D-B4ED475B4FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6FB279A-4021-4F7F-8867-32ED623586A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FB279A-4021-4F7F-8867-32ED623586A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6FB279A-4021-4F7F-8867-32ED623586A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6FB279A-4021-4F7F-8867-32ED623586A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{623580DC-1749-43F9-B232-B75CC73EF14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{623580DC-1749-43F9-B232-B75CC73EF14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{623580DC-1749-43F9-B232-B75CC73EF14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{623580DC-1749-43F9-B232-B75CC73EF14E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B8368EED-2F75-48E2-A8C3-C3B561004888} = {CD2E5BD7-F065-4210-AEA0-1AD7218F4A0B}
+		{36C3A121-3004-4A25-B213-EFD8106AFFEF} = {CD2E5BD7-F065-4210-AEA0-1AD7218F4A0B}
+		{A13A8B20-6E35-429B-BD28-25E44CDB1F28} = {F29DB190-6ECE-4F33-A72A-E88041CCE107}
+		{3DC71DA2-CE7F-473E-9A3C-1F357AE98D0D} = {28594333-DFE7-402C-B34E-EA40C9A83EB8}
+		{55413DBF-A384-4187-897D-B4ED475B4FFE} = {28594333-DFE7-402C-B34E-EA40C9A83EB8}
+		{B6FB279A-4021-4F7F-8867-32ED623586A8} = {28594333-DFE7-402C-B34E-EA40C9A83EB8}
+		{623580DC-1749-43F9-B232-B75CC73EF14E} = {28594333-DFE7-402C-B34E-EA40C9A83EB8}
+		{28594333-DFE7-402C-B34E-EA40C9A83EB8} = {CC12A84F-500C-459F-AFCB-0BFC71CB0C93}
+	EndGlobalSection
+EndGlobal
