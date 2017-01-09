@@ -23,11 +23,21 @@ A IoTWork.Reader is a **"managed multi-sensors pluggable data sampler and transm
 
 It's **multi-sensors** because it can manage up to N sensors at time.
 It's **pluggable** because you can write you own dll for Sensor Management, Data Sample Abstraction and Data Manipulation.
-It's a **data sampler** because reading data happens using a sampling policy (a trigger run each X seconds and read the data from the sensor).
-It's a **transmitter** because data read are transmitted to the central.
+It's a **data sampler** because data reading is based on trigger policy (a trigger run each X seconds and read the data from the sensor).
+It's a **transmitter** because data read are transmitted to the Central.
 It's a **managed** because it has a network interface (tcp, udp, ...) to connect to the application and manage it.
 
 The protocol used to trasmit data from the Reader to the Central is known as **IoTWork.Protocol** and it is documentated here.
+
+# The Reader and Central
+
+Usually interaction between Central and Reader happens as the following:
+
+* Driven from the Central. In this scenario the Central sends commands to the Reader and this one can answer with reply message.
+* Pushed from the Reader. In this scenario the Reader sends data collected to the Central
+
+
+
 
 
 # Components of a Reader
