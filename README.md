@@ -58,15 +58,52 @@ This XML file is hosted inside the iotreader folder.
 The XML configuration file include following sections:
 
 1. Base information about the reader
-2. Description of the Managent
-3. Description of the Data
+2. Description of the Manager
+3. Description of the Dispatcher
 4. Description of the Sensors, Pipes, Triggers and Chains 
 
 # iotreader folder
 
 The iotreader folder included all components (Sensors, Pipes and your own dll) needed by the reader.
 It's located at the path /iot/iotreader/.
-The filesystem of the iotreader folder is the following:
+Usually the filesystem of the iotreader folder is like the following:
+
+```
+iot/
+└── iotreader
+    ├── bin
+    │   ├── IoTWork.Contracts.net4.dll
+    │   ├── IoTWork.Contracts.net4.dll.mdb
+    │   ├── IoTWork.IoTReader.Console.net4.exe
+    │   ├── IoTWork.IoTReader.Console.net4.exe.mdb
+    │   ├── IoTWork.IoTReader.net4.dll
+    │   ├── IoTWork.IoTReader.net4.dll.mdb
+    │   └── Newtonsoft.Json.dll
+    ├── conf
+    │   ├── configuration_factory.xml
+    │   └── configuration_iotreader.xml
+    ├── keys
+    │   ├── device.key
+    │   ├── header.key
+    │   └── payload.key
+    ├── log
+    ├── modules
+    │   ├── Bridge.Linux.dll
+    │   ├── modules.txt
+    │   └── Pi.SHat.RTIMULib.dll
+    ├── pipes
+    │   ├── IoTWork.Contracts.net4.dll
+    │   ├── IoTWork.Samples.net4.dll
+    │   └── Pi.SHat.Sensor.Pipe.Dump.mono.dll
+    ├── sensors
+    │   ├── IoTWork.Contracts.net4.dll
+    │   ├── IoTWork.Samples.net4.dll
+    │   ├── Pi.SHat.Sensor.Humidity.mono.dll
+    │   ├── Pi.SHat.Sensor.Pressure.mono.dll
+    │   └── Pi.SHat.Sensor.Temperature.mono.dll
+    └── tmp
+```
+
 
 
 The main sub folders are:
