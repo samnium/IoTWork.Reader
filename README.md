@@ -104,13 +104,14 @@ iot/
     └── tmp
 ```
 
-
+*(this is the iotreader folder of the PI 3 Sense Hat release 0.1)
 
 The main sub folders are:
 
 * bin: includes the IotWork.Reader binary
 * conf: includes configuration files
-* modules: includes dll loaded as shared between components (Sensors and Pipes).
+* keys: secret keys for the communication betweek Central and Reader
+* modules: includes dll loaded as shared components between Sensors and Pipes.
 * sensors: dll of the sensors
 * pipes: dll of the pipes
 
