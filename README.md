@@ -29,15 +29,14 @@ It's a **managed** because it has a network interface (tcp, udp, ...) to connect
 
 The protocol used to trasmit data from the Reader to the Central is known as **IoTWork.Protocol** and it is documentated here.
 
-# The Reader and Central
+# The Reader and the Central
 
 Usually interaction between Central and Reader happens as the following:
 
 * Driven from the Central. In this scenario the Central sends commands to the Reader and this one can answer with reply message.
 * Pushed from the Reader. In this scenario the Reader sends data collected to the Central
 
-
-
+![Central-Reader communication](https://rawgit.com/samnium/IoTWork.Reader/master/images/IoTWork.Central.Reader.Communication.png>)
 
 
 # Components of a Reader
