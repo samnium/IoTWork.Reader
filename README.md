@@ -36,7 +36,7 @@ Usually interaction between Central and Reader happens as the following:
 * Driven from the Central. In this scenario the Central sends commands to the Reader and this one can answer with reply message.
 * Pushed from the Reader. In this scenario the Reader sends data collected to the Central
 
-![Central-Reader communication](https://rawgit.com/samnium/IoTWork.Reader/master/images/IoTWork.Central.Reader.Communication.png>)
+![Central-Reader communication](https://rawgit.com/samnium/IoTWork.Reader/master/images/IoTWork.Central.Reader.Communication.png)
 
 
 # Components of a Reader
@@ -47,7 +47,7 @@ The main components of a reader are:
 2. *Dispatcher*: the network component used to send data to the central. Read more.
 3. *Chains*: a chain is an abstraction used to acquire and manage data from a specific sensor before to send it to the Central. Read more.
 
-![Central-Reader communication](https://rawgit.com/samnium/IoTWork.Reader/master/images/IoTWork.Reader.View.Components.png>)
+![Central-Reader communication](https://rawgit.com/samnium/IoTWork.Reader/master/images/IoTWork.Reader.View.Components.png)
 
 
 # Configuring a Reader
