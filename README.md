@@ -43,9 +43,11 @@ Usually interaction between Central and Reader happens as the following:
 
 The main components of a reader are:
 
-1. Manager: the network interface used to manage it. Read more.
-2. Data Sendere: the network component used to send data to the central. Read more.
-3. Chains: a chain is an abstraction used to acquire and manage data from a specific sensor before to send it to the Central. Read more.
+1. *Manager*: the network interface used to manage it. Read more.
+2. *Dispatcher*: the network component used to send data to the central. Read more.
+3. *Chains*: a chain is an abstraction used to acquire and manage data from a specific sensor before to send it to the Central. Read more.
+
+![Central-Reader communication](https://rawgit.com/samnium/IoTWork.Reader/master/images/IoTWork.Reader.View.Components.png>)
 
 
 # Configuring a Reader
