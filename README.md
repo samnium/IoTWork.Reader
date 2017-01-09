@@ -121,25 +121,39 @@ The main sub folders are:
 
 IoTWork.Reader is run from a Linux command line or script using the following syntax:
 
+```
+ ./IoTWork.IoTReader.Console.net4.exe --islinux
+```
 
 Configuration and modules are included inside iotreader folder.
 
 During the start process the IoTWork.Reader:
 
-1. read configuration /iot/iotreader/conf/xxxxx
+1. read configuration /iot/iotreader/conf/configuration_iotreader.xml
 2. load modules listed inside the file /iot/iotreader/modules/modules.txt (dll have to be placed in this same folder)
 3. parse the XML configuration file
-4. for each sensor it allocate it, after it allocate the trigger, read and allocate the chain by mounting each piece (Sensor, Pipes and Trigger).
-5. configure the Management
-6. configure the Data
-7. start sensor jobs, one for chain
-8. start management interface
-9. go in listen state and wait for command from the outside
+4. for each sensor then allocates it, its trigger, the chain's pipes, and and mount chain pieces (Sensor, Pipes and Trigger).
+5. configure the Manager
+6. configure the Dispatcher
+7. start a **sensor jobs** (a thread) one for chain
+8. start the Manager Interface Listner
+9. go in listen state and wait for command from the Central
 
-# How a Reader works
+At this point:
 
-The structure of the  iotreader folder is the following
+* Commands from the Central are acquired by the Manager, parsed and executed
+* Data from Sensors are collected and sent to the Central via the Dispatcher
 
 # Commands Managed by a Reader
 
 # Reader internals
+
+## Protocols and Communciation Protocols
+
+## The Chain
+
+## The Manager
+
+## The Dispatcher
+
+
