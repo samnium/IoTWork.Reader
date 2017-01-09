@@ -62,6 +62,8 @@ The XML configuration file include following sections:
 3. Description of the Dispatcher
 4. Description of the Sensors, Pipes, Triggers and Chains 
 
+Here you can find an [example of the configuration file](https://rawgit.com/samnium/IoTWork.Reader/master/data/XmlConfiguration.md).
+
 # iotreader folder
 
 The iotreader folder included all components (Sensors, Pipes and your own dll) needed by the reader.
