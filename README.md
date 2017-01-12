@@ -29,6 +29,9 @@ It's a **managed** because it has a network interface (tcp, udp, ...) to connect
 
 The protocol used to trasmit data from the Reader to the Central is known as **IoTWork.Protocol** and it is documentated here.
 
+[READER's INTERNALS](docs/Internals.md)
+
+
 # The Reader and the Central
 
 Usually interaction between Central and Reader happens as the following:
