@@ -144,16 +144,6 @@ At this point:
 * Commands from the Central are acquired by the Manager, parsed and executed
 * Data from Sensors are collected and sent to the Central via the Dispatcher
 
-# Commands Managed by a Reader
 
-# Reader internals
-
-## Protocols and Communciation Protocols
-
-## The Chain
-
-## The Manager
-
-## The Dispatcher
 
 
