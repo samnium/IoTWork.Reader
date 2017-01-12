@@ -58,7 +58,7 @@ Interfaces IIoTSample, IIoTSensor, IIotPipe belong to IoTWork.Contracts namespac
 
 ## How to define a Chain
 
-A Chain is defined inside the XML configuration file [XML configuration file](data/XmlConfiguration.md).
+A Chain is defined inside the XML configuration file [XML configuration file](https://rawgit.com/samnium/IoTWork.Reader/master/data/XmlConfiguration.md).
 
 You have to define the Chain, the Trigger and the Sensor.
 The link between these tags is done inside the Sensor section.
