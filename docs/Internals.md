@@ -31,6 +31,34 @@ When a Data Sample reaches the end of the Chain then it is enqueued, it waits to
 
 ![Data Sample simulation](https://rawgit.com/samnium/IoTWork.Reader/master/images/IoTWork.Reader.Chain5.png)
 
+## Type of Sensors
+
+We have four type of Sensor:
+
+* Simple: don't produce any data
+* Random: produce a random integer
+* Custom: custom sensor object implementing IIoTSensor, produce a IIoTSample object.
+
+## Type of Pipes
+
+We have four type of Pipes:
+
+* Simple: do nothing, simply traverse it
+* Wait: wait and traverse
+* Custom: custom pipe object implementing IIoTPipe, gets a IIoTSample and returns a IIoTSample
+
+## About Custom Chains
+
+A custom Chain usually is composed by:
+
+* A Custom IIoTSensor who produces IIoTSample object
+* One or Mode IIoTPipe who transforms a IIoTSample in an other IIoTSample
+
+Interfaces IIoTSample, IIoTSensor, IIotPipe belong to IoTWork.Contracts namespace and dll.
+
+## How to define a Chain
+
+A Chain is defined inside the XML configuration file (
 
 
 
