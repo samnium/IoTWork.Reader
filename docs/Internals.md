@@ -58,7 +58,56 @@ Interfaces IIoTSample, IIoTSensor, IIotPipe belong to IoTWork.Contracts namespac
 
 ## How to define a Chain
 
-A Chain is defined inside the XML configuration file (
+A Chain is defined inside the XML configuration file [XML configuration file](data/XmlConfiguration.md).
+
+You have to define the Chain, the Trigger and the Sensor.
+The link between these tags is done inside the Sensor section.
+
+This a Trigger:
+
+```
+    <trigger
+      type="simple">
+      <UniqueId>1</UniqueId>
+      <UniqueName>1.1.1.1.1.t1</UniqueName>
+      <WithIntervalInMilliseconds>15000</WithIntervalInMilliseconds>
+      <RepeatForever>false</RepeatForever>
+    </trigger>
+```
+
+This a Chain:
+
+```
+    <chain>
+      <UniqueId>1</UniqueId>
+      <UniqueName>1.1.1.1.1</UniqueName>
+      <pipes>
+        <pipe
+          type="simple"
+          stage="1" />
+        <pipe stage="2" type="custom">
+          <LibraryPath>/iot/iotreader/pipes/Pi.SHat.Sensor.Pipe.Dump.mono.dll</LibraryPath>
+          <Class>PiSHatPipe_Dump</Class>
+        </pipe>
+      </pipes>
+    </chain>
+```
+
+This a Sensor:
+
+```
+    <sensor
+      type="custom">
+      <UniqueId>1</UniqueId>
+      <UniqueName>1.1.1.1.1.s1</UniqueName>
+      <TriggerUniqueName>1.1.1.1.1.t1</TriggerUniqueName>
+      <ChainUniqueName>1.1.1.1.1</ChainUniqueName>
+      <LibraryPath>/iot/iotreader/sensors/Pi.SHat.Sensor.Humidity.mono.dll</LibraryPath>
+      <Parameters></Parameters>
+    </sensor>
+```
+
+
 
 
 
