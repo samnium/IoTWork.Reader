@@ -23,8 +23,15 @@ Data Sample is produced by the Sensor and go throughput the Pipes one for time u
 When a Data Sample reaches the end of the Chain then it is enqueued, it waits to be dispatched over the network to Central.
 
 
-## The Manager
+## An Example of Multi-Chain Reader
 
-## The Dispatcher
+![An Example of MultiChain Reader](https://rawgit.com/samnium/IoTWork.Reader/master/images/IoTWork.Reader.Chain4.png)
+
+## An Example of Multi-Chain Reader Simulation
+
+![Data Sample simulation](https://rawgit.com/samnium/IoTWork.Reader/master/images/IoTWork.Reader.Chain5.png)
+
+
+
 
 
