@@ -1,8 +1,8 @@
 
-IoTWork.Reader is a C# software component to use as standalone application.
+IoTWork.Reader, also known as Reader, is a C# software component to use as standalone application.
 It is mainly focused on reading data from sensors and sending it to the IoTWork.Central.
 
-In the following documentation the words IoTWork.Reader and Reader are interchangeable.
+[This project depends on IoTWork.NetBridge](https://github.com/samnium/IoTWork.NetBridge).
 
 # Technical Issues
 
