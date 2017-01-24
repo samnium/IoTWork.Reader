@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Pi.SHat.Sensor.Pipe.Dump.mono</RootNamespace>
     <AssemblyName>Pi.SHat.Sensor.Pipe.Dump.mono</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,10 +30,14 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bridge.Linux">
       <HintPath>..\..\..\..\drop\Bridge.Linux.dll</HintPath>
+    </Reference>
+    <Reference Include="IoTWork.Contracts">
+      <HintPath>..\..\..\..\Contracts\IoTWork.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Pi.SHat.RTIMULib">
       <HintPath>..\..\..\..\drop\Pi.SHat.RTIMULib.dll</HintPath>
@@ -50,10 +56,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\IoTWork.Contracts.net4\IoTWork.Contracts.net4.csproj">
-      <Project>{07c2b78b-df69-4bc3-a274-ad433a9220b3}</Project>
-      <Name>IoTWork.Contracts.net4</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Pi.SHat.Sensor.Humidity.mono\Pi.SHat.Sensor.Humidity.mono.csproj">
       <Project>{3dc71da2-ce7f-473e-9a3c-1f357ae98d0d}</Project>
       <Name>Pi.SHat.Sensor.Humidity.mono</Name>
