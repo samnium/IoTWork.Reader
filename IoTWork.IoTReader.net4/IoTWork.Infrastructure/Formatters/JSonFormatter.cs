@@ -14,11 +14,11 @@ namespace IoTWork.Infrastructure.Formatters
         {
             JsonSerializerSettings settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Objects };
             string json = JsonConvert.SerializeObject(data, settings);
-            json = json.Replace(", IoTWork.IoTReader.Core\"", ", IoTWork.Protocol\"");
-            json = json.Replace("IoTWork.Samples.Core", "IoTWork.Samples");
-            json = json.Replace(", IoTWork.IoTReader.net4\"", ", IoTWork.Protocol\"");
-            json = json.Replace(".mono,", ",");
-            json = json.Replace(".mono\"", "\"");
+            //json = json.Replace(", IoTWork.IoTReader.Core\"", ", IoTWork.Protocol\"");
+            //json = json.Replace("IoTWork.Samples.Core", "IoTWork.Samples");
+            //json = json.Replace(", IoTWork.IoTReader.net4\"", ", IoTWork.Protocol\"");
+            //json = json.Replace(".mono,", ",");
+            //json = json.Replace(".mono\"", "\"");
             var bytes = Encoding.UTF8.GetBytes(json);
             return bytes;
         }

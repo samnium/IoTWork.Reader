@@ -36,6 +36,9 @@
     <Reference Include="IoTWork.Contracts">
       <HintPath>..\Contracts\IoTWork.Contracts.dll</HintPath>
     </Reference>
+    <Reference Include="IoTWork.Contracts">
+      <HintPath>..\Contracts\IoTWork.Protocol.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -103,42 +106,6 @@
     <Compile Include="IoTWork.Infrastructure\Statistics\Statistics.cs" />
     <Compile Include="IoTWork.Infrastructure\Types\IoTReaderCommand.cs" />
     <Compile Include="IoTWork.Infrastructure\Types\IoTReaderCommandName.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\AskForAlive.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\AskForErrors.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\AskForStatistics.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\AskForUpTime.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\Command.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\CommandForDevice.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\CommandForNavigation.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\CommandForQuery.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\CommandForTransfer.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\ListOfDllFilesForPipes.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\ListOfDllFilesForSensors.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\RestartAcquire.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\RestartApplication.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\RestartDevice.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\StopAcquire.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\UploadConfigurationDeviceFile.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\UploadConfigurationLogFile.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\UploadRequestForDllFileForPipe.cs" />
-    <Compile Include="IoTWork.Protocol\Commands\UploadRequestForDllFileForSensor.cs" />
-    <Compile Include="IoTWork.Protocol\Datas\Measures.cs" />
-    <Compile Include="IoTWork.Protocol\Datas\Sample.cs" />
-    <Compile Include="IoTWork.Protocol\Devices\AcquireStatus.cs" />
-    <Compile Include="IoTWork.Protocol\Devices\Alive.cs" />
-    <Compile Include="IoTWork.Protocol\Devices\Errors.cs" />
-    <Compile Include="IoTWork.Protocol\Devices\ManagerStarted.cs" />
-    <Compile Include="IoTWork.Protocol\Devices\ManagerStopped.cs" />
-    <Compile Include="IoTWork.Protocol\Devices\Message.cs" />
-    <Compile Include="IoTWork.Protocol\Devices\Note.cs" />
-    <Compile Include="IoTWork.Protocol\Devices\Statistics.cs" />
-    <Compile Include="IoTWork.Protocol\Devices\UpTime.cs" />
-    <Compile Include="IoTWork.Protocol\IIotPacket.cs" />
-    <Compile Include="IoTWork.Protocol\IotPacket.cs" />
-    <Compile Include="IoTWork.Protocol\Types\Header.cs" />
-    <Compile Include="IoTWork.Protocol\Types\PacketCodes.cs" />
-    <Compile Include="IoTWork.Protocol\Types\Payload.cs" />
-    <Compile Include="IoTWork.Protocol\Types\ServiceCodes.cs" />
     <Compile Include="IoTWork.XML\FileLoader.cs" />
     <Compile Include="IoTWork.XML\ILoader.cs" />
     <Compile Include="IoTWork.XML\IParser.cs" />
